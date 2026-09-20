@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500;600;700&family=Outfit:wght@600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  /* Core palette */
+  --color-th-bg: #0a0f1c;
+  --color-th-bg-elevated: #0f172a;
+  --color-th-card: #141d31;
+  --color-th-card-hover: #182238;
+  --color-th-border: #243049;
+  --color-th-border-bright: #334155;
+
+  --color-th-blue: #3b82f6;
+  --color-th-blue-bright: #60a5fa;
+  --color-th-red: #ef4444;
+  --color-th-red-bright: #f87171;
+  --color-th-green: #10b981;
+  --color-th-green-bright: #34d399;
+  --color-th-amber: #f59e0b;
+  --color-th-amber-bright: #fbbf24;
+
+  --color-th-text: #f1f5f9;
+  --color-th-text-muted: #94a3b8;
+  --color-th-text-dim: #64748b;
+
+  --font-display: 'Outfit', 'Inter', sans-serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', 'SF Mono', monospace;
+}
+
+html, body {
+  background: var(--color-th-bg);
+  color: var(--color-th-text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #334155 transparent;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 8px;
+}
+
+.font-mono-num {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* Glassmorphism card */
+.glass-card {
+  background: rgba(20, 29, 49, 0.72);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(51, 65, 85, 0.4);
+  border-radius: 14px;
+}
+
+.glow-blue {
+  box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.15), 0 0 24px rgba(59, 130, 246, 0.12);
+}
+.glow-green {
+  box-shadow: 0 0 0 1px rgba(16, 185, 129, 0.15), 0 0 24px rgba(16, 185, 129, 0.12);
+}
+.glow-red {
+  box-shadow: 0 0 0 1px rgba(239, 68, 68, 0.15), 0 0 24px rgba(239, 68, 68, 0.12);
+}
+
+.gradient-gain {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.14), rgba(6, 182, 212, 0.10));
+}
+.gradient-loss {
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.14), rgba(249, 22, 66, 0.08));
+}
+.gradient-neutral {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.14), rgba(6, 182, 212, 0.10));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
